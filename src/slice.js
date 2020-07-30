@@ -9,7 +9,6 @@ const initialState = {
 
 const reducers = {
   requestLogin(state, { payload: password }) {
-    console.log(password);
     return {
       ...state,
       loginFields: {
@@ -26,7 +25,6 @@ const { actions, reducer } = createSlice({
   initialState,
   reducers,
 });
-
 
 export const {
   requestLogin,
