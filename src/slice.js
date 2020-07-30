@@ -5,6 +5,7 @@ const initialState = {
     email: 'tester@example.com',
     password: '',
   },
+  searchWord: '',
 };
 
 const reducers = {
@@ -18,6 +19,12 @@ const reducers = {
     };
   },
 
+  changeSearchWord(state, { payload: searchWord }) {
+    return {
+      ...state,
+      searchWord,
+    };
+  },
 };
 
 const { actions, reducer } = createSlice({
@@ -28,6 +35,7 @@ const { actions, reducer } = createSlice({
 
 export const {
   requestLogin,
+  changeSearchWord,
 } = actions;
 
 export default reducer;
