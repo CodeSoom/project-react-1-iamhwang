@@ -23,8 +23,10 @@ export default function SearchContainer() {
   }
   
   function handleClick() {
-    const url = '/TestPage';
-    history.push(url);
+    //const url = '/ServicePage';
+    //history.push(url);
+    const url ='https://www.mule.co.kr/bbs/market/sell?page=1&map=list&mode=list&region=&start_price=&end_price=&qf=title&qs='+searchWord;
+    location.replace(url);
   }
 
   return (
