@@ -39,11 +39,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-=======
->>>>>>> setting for develop environment
     "@reduxjs/toolkit": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
