@@ -1,12 +1,15 @@
 import React from 'react';
+
 import { render } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import HomePage from './HomePage';
 
-jest.mock('react-redux');
+import App from './App';
+import { MemoryRouter } from 'react-router';
 
-describe('HomePage', () => {
+jest.mock('react-redux');  
+
+describe('App', () => {
   const dispatch = jest.fn();
   
   beforeEach(() => {
@@ -18,9 +21,13 @@ describe('HomePage', () => {
     }));
   });
 
-  it('renders HomePage', () => {
-    const { container } = render(<HomePage />);
+  it('renders App', () => {
+  const { container } = render((
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  ));
 
-    expect(container).toHaveTextContent('반갑습니다');
+  expect(container).toHaveTextContent('iamHwang');
   });
 });
