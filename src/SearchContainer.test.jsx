@@ -36,13 +36,13 @@ describe('HomePage', () => {
     }));
   });
 
-  it('Clicks "검색" button', () => {
-    const { getByText } = renderSearchContainer();
+  // it('Clicks "검색" button', () => {
+  //   const { getByText } = renderSearchContainer();
 
-    fireEvent.click(getByText('검색'));
+  //   fireEvent.click(getByText('검색'));
 
-    expect(mockPush).toBeCalledWith('/TestPage');
-  });
+  //   expect(mockPush).toBeCalledWith('/TestPage');
+  // });
 
   it('Clicks "검색" button', () => {
     const { getByPlaceholderText } = renderSearchContainer();
