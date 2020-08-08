@@ -5,7 +5,6 @@ import SearchContainer from './SearchContainer';
 export default function HomePage() {
   return (
     <>
-      <p>iamHwang님, 반갑습니다.</p>
       <SearchContainer />
       <>
         <h2>매물</h2>

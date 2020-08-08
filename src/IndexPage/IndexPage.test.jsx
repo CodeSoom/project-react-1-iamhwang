@@ -1,15 +1,12 @@
 import React from 'react';
-
 import { render } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import IndexPage from './IndexPage';
 
-import App from './App';
-import { MemoryRouter } from 'react-router';
+jest.mock('react-redux');
 
-jest.mock('react-redux');  
-
-describe('App', () => {
+describe('HomePage', () => {
   const dispatch = jest.fn();
   
   beforeEach(() => {
@@ -21,13 +18,9 @@ describe('App', () => {
     }));
   });
 
-  it('renders App', () => {
-  const { container } = render((
-    <MemoryRouter>
-      <App />
-    </MemoryRouter>
-  ));
+  it('renders HomePage', () => {
+    const { container } = render(<IndexPage />);
 
-  expect(container).toHaveTextContent('마켓');
+    expect(container).toHaveTextContent('마켓');
   });
 });

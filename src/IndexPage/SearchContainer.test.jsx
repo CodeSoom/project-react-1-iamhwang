@@ -36,15 +36,15 @@ describe('HomePage', () => {
     }));
   });
 
-  // it('Clicks "검색" button', () => {
-  //   const { getByText } = renderSearchContainer();
-
-  //   fireEvent.click(getByText('검색'));
-
-  //   expect(mockPush).toBeCalledWith('/TestPage');
-  // });
-
   it('Clicks "검색" button', () => {
+    const { getByText } = renderSearchContainer();
+
+    fireEvent.click(getByText('검색'));
+
+    expect(mockPush).toBeCalledWith('/home');
+  });
+
+  it('Search Instrument data', () => {
     const { getByPlaceholderText } = renderSearchContainer();
 
     fireEvent.change(getByPlaceholderText('search'), {
