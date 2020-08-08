@@ -9,9 +9,8 @@ export default function Test() {
   const password = 'password';
   const dispatch = useDispatch();
 
-  const { loginFields, searchWord } = useSelector((state) => ({
+  const { loginFields } = useSelector((state) => ({
     loginFields: state.loginFields,
-    searchWord: state.searchWord,
   }));
 
   function handleSubmit(password) {
@@ -28,8 +27,6 @@ export default function Test() {
       </button>
       {loginFields.email}
       {loginFields.password}
-      {searchWord}
     </>
   );
 }
-

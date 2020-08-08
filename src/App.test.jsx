@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 
 import { render } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,6 +28,6 @@ describe('App', () => {
     </MemoryRouter>
   ));
 
-  expect(container).toHaveTextContent('마켓');
+  expect(container).toHaveTextContent('iamHwang');
   });
 });

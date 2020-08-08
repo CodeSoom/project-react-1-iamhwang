@@ -13,5 +13,5 @@ ReactDOM.render(
       </BrowserRouter>
     </Provider>
   ),
-  document.getElementById('마켓'),
+  document.getElementById('app'),
 );
