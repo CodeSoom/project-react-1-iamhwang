@@ -28,6 +28,6 @@ describe('App', () => {
     </MemoryRouter>
   ));
 
-  expect(container).toHaveTextContent('iamHwang');
+  expect(container).toHaveTextContent('마켓');
   });
 });

@@ -21,9 +21,7 @@ app.get("/", (req, res) => {
     getHtml()
       .then((html) => {
         const $ = cheerio.load(html.data);
-        //let parentTag = $("div.liveNum ul.liveNum li");
         const parentTag = $("div.board-list-wrapper table tbody tr");
-        // 크롤링할 태그 찾기
   
         let resultArr = [];
         parentTag.each(function (i, elem) {

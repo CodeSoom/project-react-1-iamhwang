@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 import {
   changeSearchWord,
-  findInstrument,
+  searchData,
 } from '../slice';
 
 import SearchPage from './SearchPage';
@@ -24,7 +24,7 @@ export default function SearchContainer() {
   }
   
   function handleClick() {
-    dispatch(findInstrument(searchWord));
+    dispatch(searchData(searchWord));
     const url = '/home';
     history.push(url);
   }

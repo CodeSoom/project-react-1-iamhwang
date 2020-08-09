@@ -18,6 +18,6 @@ describe('HomePage', () => {
   it('renders HomePage', () => {
     const { container } = render(<HomePage />);
 
-    expect(container).toHaveTextContent("반갑습니다");
+    expect(container).toHaveTextContent("Guest");
   });
 });
