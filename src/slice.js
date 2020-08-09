@@ -1,11 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { 
+  crawlingData
+} from './services/api';
+
 const initialState = {
   loginFields: {
-    email: 'tester@example.com',
+    email: '',
     password: '',
   },
   searchWord: '',
+  searchResults: [
+    {
+      no: '',
+      price: '',
+      redgt: '',
+      title: '',
+      region: '',
+      view: '',
+    }
+  ],
 };
 
 const reducers = {
@@ -25,6 +39,13 @@ const reducers = {
       searchWord,
     };
   },
+
+  resultData(state, { payload: searchResults }) {
+    return {
+      ...state,
+      searchResults,
+    };
+  },
 };
 
 const { actions, reducer } = createSlice({
@@ -36,6 +57,14 @@ const { actions, reducer } = createSlice({
 export const {
   requestLogin,
   changeSearchWord,
+  resultData,
 } = actions;
+
+export function searchData(searchWord) {
+  return async (dispatch) => {
+    const { data } = await crawlingData();
+    dispatch(resultData(data));
+  };
+}
 
 export default reducer;
