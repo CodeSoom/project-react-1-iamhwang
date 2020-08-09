@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import {
   Switch,
   Route,
@@ -8,7 +7,6 @@ import {
 
 import HomePage from './HomePage';
 import TestPage from './TestPage';
-
 
 export default function App() {
   return (
