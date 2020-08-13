@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Typography, Button } from '@material-ui/core';
 
 export default function SearchPage({ onChange, onClick, value }) {
   function handleChange(event){
@@ -7,8 +8,8 @@ export default function SearchPage({ onChange, onClick, value }) {
   }
 
   return (
-    <>
-      <h1>마켓</h1>
+    <Container align="center" style={{ display: 'inline-grid'}} >
+      <Typography>마켓</Typography>
       <label htmlFor="search-input">악기</label>
       <input 
         id="search-input"
@@ -17,9 +18,9 @@ export default function SearchPage({ onChange, onClick, value }) {
         placeholder="search"
         onChange={handleChange}
       />
-      <button type="button" onClick={onClick}>
+      <Button color="primary" type="button" onClick={onClick}>
         검색
-      </button>
-    </>
+      </Button>
+    </Container>
   );
 }
