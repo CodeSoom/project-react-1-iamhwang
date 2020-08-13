@@ -9,8 +9,11 @@ app.use(cors());
 
 const getHtml = async () => {
   try {
-    const url= 'https://www.mule.co.kr/bbs/market/sell';
+
+    const url= 'https://www.mule.co.kr/bbs/market/sell?page=1&qf=title&qs=martin';
+    //const url= 'https://www.mule.co.kr/bbs/market/sell?page=1&qf=title&qs=마틴';
     return await axios.get(url);
+    
     
   } catch (error) {
     console.error(error);

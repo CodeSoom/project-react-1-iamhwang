@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Button } from 'reactstrap';
 
 export default function InstrumentsPage({ searchResults }) {
   if(!searchResults){
@@ -7,8 +6,7 @@ export default function InstrumentsPage({ searchResults }) {
   }
 
   return (
-    <>
-      
+    <>   
       <ul>
       {searchResults.map((searchResult) => (
         <li key={searchResult.no}>

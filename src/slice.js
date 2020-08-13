@@ -63,6 +63,7 @@ export const {
 export function searchData(searchWord) {
   return async (dispatch) => {
     const { data } = await crawlingData();
+  
     dispatch(resultData(data));
   };
 }
