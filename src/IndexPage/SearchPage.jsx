@@ -18,9 +18,9 @@ export default function SearchPage({ onChange, onClick, value }) {
         placeholder="search"
         onChange={handleChange}
       />
-      <Button color="primary" type="button" onClick={onClick}>
+      <button type="button" onClick={onClick}>
         검색
-      </Button>
+      </button>
     </Container>
   );
 }

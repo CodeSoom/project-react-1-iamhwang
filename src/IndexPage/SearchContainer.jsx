@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductHero from '../css/modules/views/ProductHero';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -7,8 +8,6 @@ import {
   changeSearchWord,
   searchData,
 } from '../slice';
-
-import SearchPage from './SearchPage';
 
 export default function SearchContainer() {
   const history = useHistory()
@@ -30,6 +29,6 @@ export default function SearchContainer() {
   }
 
   return (
-    <SearchPage onChange={handleChange} onClick={handleClick} value={searchWord} />
+    <ProductHero onChange={handleChange} onClick={handleClick} value={searchWord} />
   );
 }
