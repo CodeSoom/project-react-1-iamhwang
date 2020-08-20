@@ -137,7 +137,7 @@ function ProductCategories(props) {
   return (
     <Container className={classes.root} component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+        ALL For YOUR SOUND
       </Typography>
       <div className={classes.images}>
         {images.map((image) => (

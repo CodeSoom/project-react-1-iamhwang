@@ -1,24 +1,3 @@
-// import React from 'react';
-// import { Container, AppBar, Toolbar, Typography } from '@material-ui/core';
-
-// import LoginContainer from './LoginContainer';;
-
-// export default function HomePage() {
-//   return (
-//     <>
-//       <Container style={{ padding: "30px"}} >
-//         <AppBar style={{ backgroundColor: '#424242' }}>
-//           <Toolbar>
-//             <Typography>HELLO, MARKET</Typography>  
-//             <LoginContainer />        
-//           </Toolbar>
-//         </AppBar>
-//       </Container>
-      
-//       <InstrumentsContainer />
-//     </>
-//   );
-// }
 import React from 'react';
 import clsx from 'clsx';
 import { fade,makeStyles, useTheme } from '@material-ui/core/styles';
@@ -44,6 +23,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import InfoIcon from '@material-ui/icons/Info';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import InstrumentsContainer from './InstrumentsContainer'
+import Button from '@material-ui/core/Button';
 
 const drawerWidth = 240;
 
@@ -105,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+    textAlign: "center",
   },
   search: {
     position: 'relative',
@@ -157,6 +138,10 @@ export default function MiniDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  
+  function handleClick() {
+    console.log("hi");
+  }
 
   return (
     <div className={classes.root}>
@@ -167,7 +152,7 @@ export default function MiniDrawer() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        <Toolbar style={{ background: "#28282a" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -183,11 +168,11 @@ export default function MiniDrawer() {
             SOUND MARKET
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
+            <div className={classes.searchIcon} >
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="SEARCH"
+              placeholder="SEARCH YOU WANT"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -195,6 +180,17 @@ export default function MiniDrawer() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          <Button
+                style={{ width: '10%', minWidth: 50, }}
+                color="secondary"
+                variant="contained"
+                size="large"
+                className={classes.button}
+                component="a"
+                onClick={handleClick}
+              >
+                Search
+              </Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -238,12 +234,12 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
+      <div className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
+        <Typography>
           <InstrumentsContainer />
-        </Typography>
-      </main>
+        </Typography>       
+      </div>
     </div>
   );
 }
