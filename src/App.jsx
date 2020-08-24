@@ -5,16 +5,16 @@ import {
   Route,
 } from 'react-router-dom';
 
-import HomePage from './HomePage/HomePage';
 import IndexPage from './IndexPage/IndexPage';
-
+import HomePage from './HomePage/HomePage';
 
 export default function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={IndexPage} />
+        <Route path="/index" component={IndexPage} />
         <Route path="/home" component={HomePage} />
+        <Route path="/" component={IndexPage} />
       </Switch>
     </>
   );

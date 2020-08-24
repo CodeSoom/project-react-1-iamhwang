@@ -9,9 +9,8 @@ app.use(cors());
 
 const getHtml = async () => {
   try {
-    const url= 'https://www.mule.co.kr/bbs/market/sell';
-    return await axios.get(url);
-    
+    const url= 'https://www.mule.co.kr/bbs/market/sell?page=1&qf=title&qs=martin';
+    return await axios.get(url); 
   } catch (error) {
     console.error(error);
   }
@@ -28,13 +27,14 @@ app.get("/", (req, res) => {
             var itemObj = {
                 no: $(this).find("td.no").text().replace("프리미엄","").trim(),
                 region: $(this).find("td.region").text(),
-                title: $(this).find("td.title a").text().replace(/(\r\n\t|\n|\r\t)/gm,"").trim(),
+                title: $(this).find("td.title a").text().replace(/(\r\n\t|\n|\r\t)/gm,"").trim().substr(0,16),
                 price: $(this).find("td.price").text(),
                 regdt: $(this).find("td.regdt").text(),
                 view: $(this).find("td.view").text(),
             };
-
-            resultArr.push(itemObj);
+            if(itemObj.no!==''&&itemObj.title!==''){
+              resultArr.push(itemObj);
+            }
         });
   
         resultArr.forEach((elem) => {
@@ -46,7 +46,6 @@ app.get("/", (req, res) => {
   }
 );
   
-
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
 );

@@ -1,17 +1,21 @@
 import React from 'react';
-
+import withRoot from '../css/modules/withRoot';
+import ProductCategories from '../css/modules/views/ProductCategories';
+import ProductValues from '../css/modules/views/ProductValues';
+import ProductHowItWorks from '../css/modules/views/ProductHowItWorks';
+import AppAppBar from '../css/modules/views/AppAppBar';
 import SearchContainer from './SearchContainer';
 
-export default function HomePage() {
+function IndexPage() {
   return (
-    <>
+    <React.Fragment>
+      <AppAppBar />
       <SearchContainer />
-      <>
-        <h2>매물</h2>
-        <h4>통앤통</h4>
-        <h4>Mule</h4>
-        <p>위 사이트 매물 정보는 현재 준비중입니다.</p>
-      </>
-    </>
+      <ProductValues />
+      <ProductCategories />
+      <ProductHowItWorks />
+    </React.Fragment>
   );
 }
+
+export default withRoot(IndexPage);
