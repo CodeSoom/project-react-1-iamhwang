@@ -22,7 +22,7 @@ export default function InstrumentsPage({ searchResults }) {
 
   const classes = useStyles();
   
-  if(searchResults.length==1){
+  if(!(searchResults || []).length){
     return (
       <>
         <img
@@ -43,7 +43,7 @@ export default function InstrumentsPage({ searchResults }) {
     <>
       <Grid container spacing={2}>
         {searchResults.map((searchResult) => (
-          <Grid item xs={12} md={2}>
+          <Grid key={searchResult.no} item xs={12} md={2}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia

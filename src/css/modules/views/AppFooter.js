@@ -8,13 +8,14 @@ import TextField from '../components/TextField';
 
 function Copyright() {
   return (
-    <React.Fragment>
+    <>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
-      </Link>{' '}
+      </Link>
+      {' '}
       {new Date().getFullYear()}
-    </React.Fragment>
+    </>
   );
 }
 
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     width: 48,
     height: 48,
     display: 'flex',
-    //justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: theme.palette.warning.main,
     marginRight: theme.spacing(1),
@@ -83,7 +84,7 @@ export default function AppFooter() {
             <Grid
               container
               direction="column"
-              //justifyContent="flex-end"
+              // justifyContent="flex-end"
               className={classes.iconsWrapper}
               spacing={2}
             >

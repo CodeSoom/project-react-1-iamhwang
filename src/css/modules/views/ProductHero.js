@@ -11,13 +11,12 @@ import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
-
 const backgroundImage = '../../../../images/guitar.jpeg';
 
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#7fc7d9', 
+    backgroundColor: '#7fc7d9',
     backgroundPosition: 'center',
   },
   button: {
@@ -36,9 +35,11 @@ const styles = (theme) => ({
 });
 
 function ProductHero(props) {
-  const { classes, onChange, onClick, value } = props;
+  const {
+    classes, onChange, onClick, value,
+  } = props;
 
-  function handleChange(event){
+  function handleChange(event) {
     const { target: { value } } = event;
     onChange(value);
   }
@@ -54,16 +55,18 @@ function ProductHero(props) {
         EASY TO COMPARE USED INSTRUMENTS
       </Typography>
       <Input
-          style={{ width: '30%', color: "white", padding: '30px 0px', fontSize: 'x-large' }}
-          id="input-with-icon-adornment"
-          value={value}
-          placeholder="SEARCH YOU WANT"
-          onChange={handleChange}
-          startAdornment={
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          }
+        style={{
+          width: '30%', color: 'white', padding: '30px 0px', fontSize: 'x-large',
+        }}
+        id="input-with-icon-adornment"
+        value={value}
+        placeholder="SEARCH YOU WANT"
+        onChange={handleChange}
+        startAdornment={(
+          <InputAdornment position="start">
+            <SearchIcon />
+          </InputAdornment>
+          )}
       />
       <Button
         style={{ width: '30%' }}

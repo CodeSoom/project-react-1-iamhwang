@@ -49,7 +49,7 @@ function AppAppBar(props) {
             color="inherit"
             className={classes.title}
           >
-            {'SOUND MARKET'}
+            SOUND MARKET
           </Link>
           <div className={classes.right}>
             {/* <Link
