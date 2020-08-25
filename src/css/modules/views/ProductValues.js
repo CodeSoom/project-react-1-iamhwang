@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 
-//import BackImage from '../../../../images/productCurvyLines';
+// import BackImage from '../../../../images/productCurvyLines';
 
 const styles = (theme) => ({
   root: {
@@ -56,7 +56,7 @@ function ProductValues(props) {
               <Typography variant="h5">
                 { '뮬, 통앤통, 중고나라 등 여러 사이트를 돌아다니며 검색하고 계신가요 ? ' }
                 { '사운드마켓에서는 한 눈에 가격 비교를 할 수 있습니다. ' }
-                { '당신의 지름을 응원하고 지원합니다.' }
+                당신의 지름을 응원하고 지원합니다.
               </Typography>
             </div>
           </Grid>

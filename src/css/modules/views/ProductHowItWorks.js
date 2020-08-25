@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import { useHistory } from 'react-router-dom';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-import { useHistory } from 'react-router-dom';
 
 const styles = (theme) => ({
   root: {
@@ -55,7 +55,7 @@ const styles = (theme) => ({
 function ProductHowItWorks(props) {
   const { classes } = props;
 
-  const history = useHistory()
+  const history = useHistory();
 
   function handleClick() {
     const url = '/home';
@@ -102,7 +102,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                {'express'}
+                  express
                 </Typography>
               </div>
             </Grid>
@@ -115,7 +115,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'aws'}
+                  aws
                 </Typography>
               </div>
             </Grid>

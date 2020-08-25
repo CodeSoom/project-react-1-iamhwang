@@ -164,7 +164,7 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography component={'span'} variant="h6" noWrap>
             SOUND MARKET
           </Typography>
           <div className={classes.search}>
@@ -236,7 +236,7 @@ export default function MiniDrawer() {
       </Drawer>
       <div className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography>
+        <Typography component={'span'}>
           <InstrumentsContainer />
         </Typography>       
       </div>
