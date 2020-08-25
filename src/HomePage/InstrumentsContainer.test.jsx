@@ -22,6 +22,14 @@ describe('renders InstrumentsContanier', () => {
           region: '경기',
           view: '12,402',
         },
+        {
+          no: '101',
+          price: '780,000원',
+          redgt: '1,304',
+          title: 'Taylor 114ce',
+          region: '서울',
+          view: '2,402',
+        },
       ],
     }));
   });

@@ -46,7 +46,7 @@ const styles = (theme) => ({
     bottom: 0,
     display: 'flex',
     alignItems: 'center',
-    //justifyContent: 'center',
+    // justifyContent: 'center',
     color: theme.palette.common.white,
   },
   imageSrc: {

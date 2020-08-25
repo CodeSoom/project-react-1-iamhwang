@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { 
-  crawlingData
+import {
+  crawlingData,
 } from './services/api';
 
 const initialState = {
@@ -10,16 +10,7 @@ const initialState = {
     password: '',
   },
   searchWord: '',
-  searchResults: [
-    {
-      no: '',
-      price: '',
-      redgt: '',
-      title: '',
-      region: '',
-      view: '',
-    }
-  ],
+  searchResults: [],
 };
 
 const reducers = {
@@ -63,7 +54,6 @@ export const {
 export function searchData(searchWord) {
   return async (dispatch) => {
     const { data } = await crawlingData();
-  
     dispatch(resultData(data));
   };
 }

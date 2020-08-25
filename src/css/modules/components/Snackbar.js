@@ -41,7 +41,9 @@ function Transition(props) {
 }
 
 function Snackbar(props) {
-  const { classes, onClose, message, ...other } = props;
+  const {
+    classes, onClose, message, ...other
+  } = props;
 
   return (
     <MuiSnackbar
@@ -58,12 +60,12 @@ function Snackbar(props) {
           action: classes.contentAction,
         },
       }}
-      message={
-        <React.Fragment>
+      message={(
+        <>
           <InfoIcon className={classes.info} />
           <span>{message}</span>
-        </React.Fragment>
-      }
+        </>
+      )}
       action={[
         <IconButton
           key="close"

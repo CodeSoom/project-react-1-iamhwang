@@ -39,7 +39,7 @@ describe('HomePage', () => {
   it('Clicks "검색" button', () => {
     const { getByText } = renderSearchContainer();
 
-    fireEvent.click(getByText('검색'));
+    fireEvent.click(getByText('Search'));
 
     expect(mockPush).toBeCalledWith('/home');
   });
@@ -47,7 +47,7 @@ describe('HomePage', () => {
   it('Search Instrument data', () => {
     const { getByPlaceholderText } = renderSearchContainer();
 
-    fireEvent.change(getByPlaceholderText('search'), {
+    fireEvent.change(getByPlaceholderText('SEARCH YOU WANT'), {
       target: { 
         value: 'martin' 
       }

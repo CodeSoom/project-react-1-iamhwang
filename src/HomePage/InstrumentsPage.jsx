@@ -16,18 +16,20 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
+  noimg: {
+    margin: "120px 0px 0px 0px",
+    height: 345
+  },
 });
 
 export default function InstrumentsPage({ searchResults }) {
 
   const classes = useStyles();
   
-  if(searchResults.length==1){
+  if(!(searchResults || []).length){
     return (
       <>
-        <img
-          style={{ margin: "120px 0px 0px 0px" }}
-          height="345"
+        <img className={classes.noimg}
           src={noResults}
         />
         <Typography gutterBottom variant="h4" color="textSecondary" component="h1">
@@ -43,7 +45,7 @@ export default function InstrumentsPage({ searchResults }) {
     <>
       <Grid container spacing={2}>
         {searchResults.map((searchResult) => (
-          <Grid item xs={12} md={2}>
+          <Grid key={searchResult.no} item xs={12} md={2}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
