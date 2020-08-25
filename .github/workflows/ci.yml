@@ -13,13 +13,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-
     - name: Install dependencies
       run: npm ci
-
     - name: Build
       run: npm run build
-      
     - name: Deploy
       if: github.ref == 'refs/heads/master'
       uses: JamesIves/github-pages-deploy-action@releases/v3
