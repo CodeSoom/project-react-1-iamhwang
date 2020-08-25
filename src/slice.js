@@ -10,16 +10,7 @@ const initialState = {
     password: '',
   },
   searchWord: '',
-  searchResults: [
-    {
-      no: '',
-      price: '',
-      redgt: '',
-      title: '',
-      region: '',
-      view: '',
-    },
-  ],
+  searchResults: [],
 };
 
 const reducers = {

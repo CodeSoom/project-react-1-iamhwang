@@ -110,12 +110,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>DEPLOY</div>
                 <img
-                  src="../../../../images/aws.png"
+                  src="../../../../images/githubaction.png"
                   alt="clock"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  aws
+                  GitHub Action
                 </Typography>
               </div>
             </Grid>

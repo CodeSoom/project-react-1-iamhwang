@@ -17,10 +17,11 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - name: Deploy to GitHub Pages
+    - name: Deploy
       if: github.ref == 'refs/heads/master'
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master
         BRANCH: gh-pages
         FOLDER: dist
-        BASE_BRANCH: master

@@ -16,6 +16,10 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
+  noimg: {
+    margin: "120px 0px 0px 0px",
+    height: 345
+  },
 });
 
 export default function InstrumentsPage({ searchResults }) {
@@ -25,9 +29,7 @@ export default function InstrumentsPage({ searchResults }) {
   if(!(searchResults || []).length){
     return (
       <>
-        <img
-          style={{ margin: "120px 0px 0px 0px" }}
-          height="345"
+        <img className={classes.noimg}
           src={noResults}
         />
         <Typography gutterBottom variant="h4" color="textSecondary" component="h1">
