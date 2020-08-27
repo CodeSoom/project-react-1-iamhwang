@@ -14,6 +14,9 @@
 4. 프로젝트 진행 및 회고
 - [진행 및 회고](https://github.com/CodeSoom/project-react-1-iamhwang/tree/master/%ED%9A%8C%EA%B3%A0)
 
+5. GIF 보기
+- [Local Gif 보기](https://github.com/CodeSoom/project-react-1-iamhwang/blob/master/soundmarket.gif)
+
 설치하기
 > npm install
 
