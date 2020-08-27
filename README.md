@@ -1,26 +1,18 @@
 # 중고악기 가격비교 서비스
 
 1. 이 앱을 언제 사용하나요?
-- 중고로 악기를 구입할 때, 여러 사이트에 들어가서 원하는 악기를 검색해본다. 번거롭다. 이 서비스는 내가 원하는 악기를 검색하면, 여러 사이트에 올라온 중고 매물 데이터를 크롤링해서 한눈에 보여준다.
+- 중고로 악기를 구입할 때, 여러 사이트에 들어가서 원하는 악기를 검색해본다. 번거롭다. 이 서비스는 내가 원하는 악기를 검색하면, 여러 사이트에 올라온 매물 데이터를 크롤링해서 한눈에 보여준다.
 
 2. 제약 조건은 무엇인가요?
 - 원하는 악기를 검색하면, 검색 결과를 확인 수 있다.
 - 원하는 악기를 선택하면 상세페이지로 이동한다.
 
 3. 개발
-- REACT 함수형 컴포넌트
-- Redux Toolkit, HOOK
-- 테스트: Jest, TDD
-- 버전관리: Git: GIt-flow
-- nodejs express / 크롤링 비동기처리(local)
-- material-ui CSS Framework
+- Front-End: ReactJS, Redux Toolkit, Emotion, React Testing Library
+- Back-End: Express(Node.js)
 
-4. 보안점
-- 1 . 서버 구축
-- 2 . 기능 : 이미지 크롤링
-- 3 . 페이지 : 상품 세부정보
-- 4 . 페이지 : 장바구니 페이지 
-- 5 . CSS 리팩토링
+4. 프로젝트 진행 및 회고
+- [진행 및 회고](https://github.com/CodeSoom/project-react-1-iamhwang/tree/master/%ED%9A%8C%EA%B3%A0)
 
 설치하기
 > npm install

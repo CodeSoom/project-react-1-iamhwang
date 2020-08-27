@@ -22,7 +22,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function InstrumentsPage({ searchResults }) {
+export default function InstrumentsPage({ searchResults, onClick }) {
+
+  function handleLink(link="https://www.mule.co.kr/bbs/market/sell") {
+    var win = window.open(link);
+    win.focus();
+  }
 
   const classes = useStyles();
   
@@ -52,7 +57,7 @@ export default function InstrumentsPage({ searchResults }) {
                   component="img"
                   alt="fail to load image"
                   height="200"
-                  image={capo}
+                  image={searchResult.guitarImage}
                   title={searchResult.title}
                 />
                 <CardContent>
@@ -65,7 +70,9 @@ export default function InstrumentsPage({ searchResults }) {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button color="primary">
+                <Button 
+                  color="primary"
+                  onClick={() => handleLink(searchResult.link)} >
                   More detail
                 </Button>
                 <Button color="primary">
