@@ -85,7 +85,7 @@ function ProductHowItWorks(props) {
                 <div className={classes.number}>FE</div>
                 <img
                   src="../../../../images/react.png"
-                  alt="suitcase"
+                  alt="react"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
@@ -98,7 +98,7 @@ function ProductHowItWorks(props) {
                 <div className={classes.number}>BE</div>
                 <img
                   src="../../../../images/express.png"
-                  alt="graph"
+                  alt="express"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
