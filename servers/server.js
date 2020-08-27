@@ -28,13 +28,12 @@ app.get('/', (req, res) => {
         const itemObj = {
           no: $(this).find('td.no').text().replace('프리미엄', '')
             .trim(),
-          region: $(this).find('td.region').text(),
+          link: $(this).find('td.title a').attr('href'),
           title: $(this).find('td.title a').text().replace(/(\r\n\t|\n|\r\t)/gm, '')
             .trim()
             .substr(0, 16),
           price: $(this).find('td.price').text(),
-          regdt: $(this).find('td.regdt').text(),
-          view: $(this).find('td.view').text(),
+          guitarImage: $(this).find('td.option img.preview-img').attr("data-src"),
         };
         if (itemObj.no !== '' && itemObj.title !== '') {
           resultArr.push(itemObj);
