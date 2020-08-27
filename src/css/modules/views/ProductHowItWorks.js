@@ -111,7 +111,7 @@ function ProductHowItWorks(props) {
                 <div className={classes.number}>DEPLOY</div>
                 <img
                   src="../../../../images/githubaction.png"
-                  alt="clock"
+                  alt="githubAction"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
